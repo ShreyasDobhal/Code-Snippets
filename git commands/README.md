@@ -35,7 +35,7 @@ To get the log of all the commits
 ```
 git log
 git log --oneline
-git log ----decorated --graph --oneline
+git log --decorated --graph --oneline
 ```
 To create an alias
 ```
