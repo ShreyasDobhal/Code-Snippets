@@ -1,5 +1,9 @@
 # Git Commands
 
+To add git to a local repository
+```
+git init
+```
 
 
 To check the status of the files (changed)
@@ -31,8 +35,13 @@ To get the log of all the commits
 ```
 git log
 git log --oneline
+git log ----decorated --graph --oneline
 ```
-
+To create an alias
+```
+git config --global alias.tree 'log --decorated --graph --oneline'
+git tree
+```
 
 To see or go to some commit point in history
 ```
@@ -47,18 +56,20 @@ git revert <commitid>
 ```
 
 
-To completely delete changes at rollback to some earlier commit
+To completely delete changes (commit) and rollback to some earlier commit
 ```
 git reset <commitid>
-git reset <commitid> --hard
+git reset <commitid> --soft # removes commit, but retains changes in staging area
+git reset <commitid> --mixed # removes from staging area as well, but retains changes in local 
+git reset <commitid> --hard # removes the changes from local working dir as well.
 ```
 
 
 To create a new branch (needs to be in master branch)
 ```
-git branch <branchname> (but still stays in master branch)
-git checkout <branchname> (to switch to that branch)
-git checkout -b <branchname> (to switch to a new branch)
+git branch <branchname> # (but still stays in master branch)
+git checkout <branchname> # (to switch to that branch)
+git checkout -b <branchname> # (to switch to a new branch)
 ```
 
 
@@ -70,7 +81,7 @@ git branch -a
 
 To delete a branch (needs to be in master branch)
 ```
-git branch -D <branchname> (if branch not already merged to master branch)
+git branch -D <branchname> # (if branch not already merged to master branch)
 ```
 
 
@@ -83,7 +94,7 @@ git merge <branchname>
 To push project to a repository
 ```
 git push <git-url.git> master
-git remote add origin <git-url.git> (Creating an alias for <git-url>, Use git remote -v to see all alias)
+git remote add origin <git-url.git> # (Creating an alias for <git-url>, Use git remote -v to see all alias)
 git push origin master
 ```
 
