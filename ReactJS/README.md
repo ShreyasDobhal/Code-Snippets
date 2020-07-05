@@ -29,6 +29,12 @@ rm -rf .git
 
 **Step 5)** Copy the required sample codes from the repo.
 
+**Step 6)** To use Redux in your application, run the following commands : 
+```
+npm install redux
+npm install react-redux
+```
+
 
 ## Running the Project
 
@@ -36,3 +42,7 @@ You can run the project using the following command
 ```
 npm start
 ```
+
+You can click 
+[here](https://www.youtube.com/watch?v=iuj86pSduu0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=1)
+to watch React and Redux Tutorials.
