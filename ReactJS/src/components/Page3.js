@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {deleteProduct} from '../actions/productActions'
 
 class Page3 extends Component{
     state= {
@@ -11,6 +13,9 @@ class Page3 extends Component{
         });
     }
     render() {
+        console.log('Props',this.props);
+        if (this.props.products.length>0)
+            this.props.deleteProduct(this.props.products[0].id);
         return (
             <div className='container'>
                 <h4 className='center'>Page 3</h4>
@@ -20,4 +25,18 @@ class Page3 extends Component{
     }
 }
 
-export default Page3;
+const mapStateToProps = (state) => {
+    return {
+        products: state.products
+    }
+}
+
+const mapDispathToProps = (dispatch) => {
+    return {
+        deleteProduct: (id)=> {
+            dispatch(deleteProduct(id))
+        }
+    }
+}
+
+export default connect(mapStateToProps,mapDispathToProps)(Page3);
