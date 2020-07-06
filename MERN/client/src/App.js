@@ -1,14 +1,17 @@
 import React from 'react';
-import SampleComponent from './components/SampleComponent'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <SampleComponent/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route exact path='/' component={()=>{return (<h1>Client running . . .</h1>)}} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
