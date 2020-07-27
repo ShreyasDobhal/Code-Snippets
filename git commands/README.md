@@ -110,6 +110,13 @@ To pull all the changes made in a branch
 git pull origin master
 ```
 
+To compare two versions
+```
+git diff --name-only HEAD~1 # To see name of files that were changed since last commit
+git diff <file-name> # To see changes made in a particular file since the last commit
+git diff <SHA1> <SHA2> # To see differences between any two commits
+```
+
 ## Working on Team Project
 
 To collaborate on a project
