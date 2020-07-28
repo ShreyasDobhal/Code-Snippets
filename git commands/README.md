@@ -139,4 +139,4 @@ To collaborate on a project
 
 
 ## For re-organizing commits refer to 
-(https://www.youtube.com/watch?v=iuj86pSduu0&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=1)
+(https://gist.github.com/loilo/930f141d9acf89e9e734ffa042acd750)
